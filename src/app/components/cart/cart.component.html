@@ -1,0 +1,14 @@
+<div class="cart-overlay">
+    <div class="cart-content">
+      <button class="close-btn" (click)="closeCart()">X</button>
+      <h2>Your Cart</h2>
+      <ul>
+        <li *ngFor="let item of cartItems">
+          <img [src]="item.image" alt="{{item.name}}" class="cart-item-image" />
+          <span class="cart-item-name">{{ item.name }}</span>
+          <span class="cart-item-price">${{ item.price }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  

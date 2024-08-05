@@ -27,20 +27,22 @@ export interface Options {
     | boolean;
 }
 
-export interface Products {
-  items: Product[];
-  total: number;
-  page: number;
-  perPage: number;
-  totalPages: number;
-}
+// export interface Products {
+//   items: Product[];
+//   total: number;
+//   page: number;
+//   perPage: number;
+//   totalPages: number;
+// }
 
 export interface Product {
-  id?: number;
-  price: string;
+  id: number;
+  price: number;
   name: string;
-  image: string;
-  rating: number;
+  image?: string;
+  quantity: number;
+  category: string;
+  description: string;
 }
 
 export interface PaginationsParams {

@@ -1,16 +1,15 @@
-<div class="column gap-1 wrapper">
-  <img src="{{product.image}}" alt="{{product.name}}">
-  <h2 class="title">{{product.name}}</h2>
-
-  <div class="row">
-    <span class="price-lable">
-      Price
-    </span>
-    <span class="price-lable">
-      {{product.price}}
-    </span>
+<div class="container">
+  <div class="product-card">
+    <div class="product-image">
+      <!-- Add your image here -->
+      <img src="assets/images/products/image1.jpg" alt="Product Image" />
+    </div>
+    <div class="product-details">
+      <h2 class="product-title">{{ product.name }}</h2>
+      <h4 class="product-price">${{product.price}}</h4>
+      <p class="product-description">{{ product.description }}</p>
+   
+      <button class="add-to-cart-btn" (click)="addToCart()">Add to Cart</button>
+    </div>
   </div>
-
-  <p-rating [(ngModel)]="product.rating" readonly="true" iconCancelClass="hidden"/>
-
 </div>
